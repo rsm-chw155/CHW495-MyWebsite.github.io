@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Cheng-Yuan Wu's Website"
+  navbar:
+    left:
+      - href: index.qmd
+        text: About
+      - href: Resume.qmd
+        text: Resume
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+
+
+

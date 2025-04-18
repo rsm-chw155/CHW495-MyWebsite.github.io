@@ -1,0 +1,21 @@
+---
+title: "Cheng-Yuan Wu"
+image: "IMG-info.JPG"
+about:
+  template: solana
+  links:
+    - icon: envelope
+      href: "mailto:chengyuanwu2002@gmail.com"
+      text: "E-Mail"
+    - icon: linkedin
+      href: "https://www.linkedin.com/in/murphywu2024/"
+      text: "LinkedIn"
+---
+
+## 👋 Introduction
+
+Hello, I'm Cheng-Yuan Wu.
+
+Welcome to my personal website! I'm currently studying at UC San Diego and working on cool projects in data, analytics, and business strategy.
+
+You can find my resume [here](resume/resume.pdf) or connect with me on [LinkedIn](https://www.linkedin.com/in/murphywu2024/).
