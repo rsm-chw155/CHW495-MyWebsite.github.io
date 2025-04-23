@@ -181,7 +181,7 @@ For each variable, we test:
 
 ### T-test Code {.code-fold}
 
-```python
+```{python}
 # For 'mrm2' as an example
 import pandas as pd
 import numpy as np
@@ -239,7 +239,8 @@ The **p-value and 95% confidence interval** should match the t-test results exac
 
 ### Regression Code {.code-fold}
 
-```python
+```{python}
+import pandas as pd
 import statsmodels.api as sm
 
 # Prepare data
@@ -271,13 +272,11 @@ The bar chart below shows the proportion of people who donated in each group.
 
 ![Donation Rate by Group](output1.png)
 
-### Impact of Treatment on Donation Behavior
-
 We tested whether individuals who received a treatment letter (with a matching grant offer) were more likely to make a charitable donation compared to those who received a standard control letter.
 
 ### T-test Code {.code-fold}
 
-```python
+```{python}
 df_treatment = data[data['treatment'] == 1]['gave'].dropna()
 df_control = data[data['treatment'] == 0]['gave'].dropna()
 
@@ -305,7 +304,7 @@ A t-test comparing the proportion of donors between the two groups revealed a st
 To confirm this result, we ran a bivariate linear regression where the outcome variable was a binary indicator of whether a donation was made. 
 
 ### Regression Code {.code-fold}
-```python
+```{python}
 df_clean = data[['gave', 'treatment']].dropna()
 X = sm.add_constant(df_clean['treatment']) 
 y = df_clean['gave']
@@ -324,7 +323,7 @@ In behavioral terms, this suggests that people respond to cues of increased impa
 To better understand the impact of the treatment on donation behavior, we estimated a **probit regression** where the binary outcome variable was whether or not a donation was made (`gave`), and the explanatory variable was the assignment to the treatment group.
 
 ### Code {.code-fold}
-```python
+```{python}
 df_clean = data[['gave', 'treatment']].dropna()
 
 X = sm.add_constant(df_clean['treatment'])
@@ -352,8 +351,7 @@ We test whether higher match ratios (2:1, 3:1) increase the probability of donat
 
 ### T-test Code {.code-fold}
 
-```python
-
+```{python}
 # Filter for treatment group with valid ratio and donation outcome
 df_ratio = data[(data['treatment'] == 1) & (data['ratio'].notnull()) & (data['gave'].notnull())]
 
@@ -393,7 +391,7 @@ We now assess the effect of different match ratios on donation behavior using a 
 
 ### Regression Code {.code-fold}
 
-```python
+```{python}
 
 # Filter treatment group and prepare ratio dummies
 df_ratio = data[(data['treatment'] == 1) & (data['ratio'].isin([1,2,3])) & (data['gave'].notnull())]
@@ -424,7 +422,7 @@ Both approaches provide estimates of how 2:1 and 3:1 match ratios compare to the
 
 ### Code {.code-fold}
 
-```python
+```{python}
 # Directly from data
 gave_11 = df_ratio[df_ratio['ratio'] == 1]['gave'].mean()
 gave_21 = df_ratio[df_ratio['ratio'] == 2]['gave'].mean()
@@ -465,7 +463,7 @@ We conduct a t-test comparing the donation amounts (`amount`) between the treatm
 
 ### T-test Code {.code-fold}
 
-```python
+```{python}
 # T-test comparing donation amounts
 amount_t = data[data['treatment'] == 1]['amount'].dropna()
 amount_c = data[data['treatment'] == 0]['amount'].dropna()
@@ -492,7 +490,7 @@ This analysis estimates the **conditional average treatment effect** (CATE) on d
 
 ### Regression Code {.code-fold}
 
-```python
+```{python}
 # Filter: only donors
 df_positive = data[(data['amount'] > 0) & data['treatment'].notnull()]
 
@@ -545,7 +543,7 @@ This helps us visualize how a sample average stabilizes as the number of samples
 
 ### Simulation Code {.code-fold}
 
-```python
+```{python}
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -597,8 +595,7 @@ For each sample size (50, 200, 500, 1000), we:
 
 ### Simulation Code {.code-fold}
 
-```python
-
+```{python}
 # Filter: only positive donation amounts
 control = data[(data['treatment'] == 0) & (data['amount'] > 0)]['amount'].values
 treatment = data[(data['treatment'] == 1) & (data['amount'] > 0)]['amount'].values
