@@ -23,5 +23,10 @@ format:
     code-fold: true
     code-summary: "Show Code"
 
+execute:
+  echo: true
+  eval: true
+  output: true
+
 
 
