@@ -16,5 +16,11 @@
   },
   "blog.qmd": {
     "blog.html": "f2802276"
+  },
+  "blog/project1/index.qmd": {
+    "index.html": "10576d39"
+  },
+  "blog/A Replication of Karlan and List (2007)/index-1.qmd": {
+    "index-1.html": "7e008778"
   }
 }

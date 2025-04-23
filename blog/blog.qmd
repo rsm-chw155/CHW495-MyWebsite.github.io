@@ -6,7 +6,7 @@ callout-appearance: minimal # this hides the blue "i" icon on .callout-notes
 listening:
   contents: blog
   type: grid
-  sort: "data desc"
+  sort: "date desc"
   categories: false
 ---
 
