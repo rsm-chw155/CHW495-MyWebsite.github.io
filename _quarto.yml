@@ -20,6 +20,8 @@ format:
       - brand
     css: styles.css
     toc: true
+    code-fold: true
+    code-summary: "Show Code"
 
 
 

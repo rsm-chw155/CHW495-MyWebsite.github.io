@@ -3,6 +3,11 @@ title: "A Replication of Karlan and List (2007)"
 author: "Cheng-Yuan Wu"
 date: today
 callout-appearance: minimal # this hides the blue "i" icon on .callout-notes
+listening:
+  contents: blog
+  type: grid
+  sort: "data desc"
+  categories: false
 ---
 
 
