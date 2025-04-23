@@ -3,8 +3,11 @@ title: "A Replication of Karlan and List (2007)"
 author: "Cheng-Yuan Wu"
 date: today
 callout-appearance: minimal # this hides the blue "i" icon on .callout-notes
+execute:
+  echo: true
+  eval: true
+  output: true
 ---
-
 
 ## Introduction
 
@@ -629,4 +632,4 @@ As sample size increases:
 
 This simulation highlights how **larger sample sizes reduce variance** and help us better detect true effects.
 
-**Larger samples** lead to more precise and stable estimates of the treatment effect
+**Larger samples** lead to more precise and stable estimates of the treatment effect.
