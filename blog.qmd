@@ -1,6 +1,6 @@
 ---
 title: "My Projects"
-listening:
+listing:
   contents: blog
   type: grid
   sort: "date desc"
