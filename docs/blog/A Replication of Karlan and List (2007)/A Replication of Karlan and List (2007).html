@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cheng-Yuan Wu">
-<meta name="dcterms.date" content="2025-04-23">
+<meta name="dcterms.date" content="2025-04-25">
 
 <title>A Replication of Karlan and List (2007) – Cheng-Yuan Wu’s Website</title>
 <style>
@@ -198,7 +198,6 @@ window.Quarto = {
   <li><a href="#experimental-results" id="toc-experimental-results" class="nav-link" data-scroll-target="#experimental-results">Experimental Results</a>
   <ul class="collapse">
   <li><a href="#charitable-contribution-made" id="toc-charitable-contribution-made" class="nav-link" data-scroll-target="#charitable-contribution-made">Charitable Contribution Made</a></li>
-  <li><a href="#impact-of-treatment-on-donation-behavior" id="toc-impact-of-treatment-on-donation-behavior" class="nav-link" data-scroll-target="#impact-of-treatment-on-donation-behavior">Impact of Treatment on Donation Behavior</a></li>
   <li><a href="#t-test-code-1" id="toc-t-test-code-1" class="nav-link" data-scroll-target="#t-test-code-1">T-test Code</a></li>
   <li><a href="#regression-code-1" id="toc-regression-code-1" class="nav-link" data-scroll-target="#regression-code-1">Regression Code</a></li>
   <li><a href="#probit-regression-analysis" id="toc-probit-regression-analysis" class="nav-link" data-scroll-target="#probit-regression-analysis">Probit Regression Analysis</a></li>
@@ -241,7 +240,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 23, 2025</p>
+      <p class="date">April 25, 2025</p>
     </div>
   </div>
   
@@ -809,7 +808,7 @@ Variable Definitions
 </section>
 <section id="t-test-code" class="level3 code-fold">
 <h3 class="code-fold anchored" data-anchor-id="t-test-code">T-test Code</h3>
-<div id="a55c2841" class="cell" data-execution_count="1">
+<div id="f666880b" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># For 'mrm2' as an example</span></span>
@@ -873,7 +872,7 @@ Y_i = \beta_0 + \beta_1 \cdot \text{treatment}_i + \epsilon_i
 </section>
 <section id="regression-code" class="level3 code-fold">
 <h3 class="code-fold anchored" data-anchor-id="regression-code">Regression Code</h3>
-<div id="f3513699" class="cell" data-execution_count="2">
+<div id="ec889e80" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -899,8 +898,8 @@ Y_i = \beta_0 + \beta_1 \cdot \text{treatment}_i + \epsilon_i
 Dep. Variable:                   mrm2   R-squared:                       0.000
 Model:                            OLS   Adj. R-squared:                 -0.000
 Method:                 Least Squares   F-statistic:                   0.01428
-Date:                Wed, 23 Apr 2025   Prob (F-statistic):              0.905
-Time:                        02:05:00   Log-Likelihood:            -1.9585e+05
+Date:                Fri, 25 Apr 2025   Prob (F-statistic):              0.905
+Time:                        13:41:14   Log-Likelihood:            -1.9585e+05
 No. Observations:               50082   AIC:                         3.917e+05
 Df Residuals:                   50080   BIC:                         3.917e+05
 Df Model:                           1                                         
@@ -937,14 +936,11 @@ Notes:
 <figcaption>Donation Rate by Group</figcaption>
 </figure>
 </div>
-</section>
-<section id="impact-of-treatment-on-donation-behavior" class="level3">
-<h3 class="anchored" data-anchor-id="impact-of-treatment-on-donation-behavior">Impact of Treatment on Donation Behavior</h3>
 <p>We tested whether individuals who received a treatment letter (with a matching grant offer) were more likely to make a charitable donation compared to those who received a standard control letter.</p>
 </section>
 <section id="t-test-code-1" class="level3 code-fold">
 <h3 class="code-fold anchored" data-anchor-id="t-test-code-1">T-test Code</h3>
-<div id="8718df83" class="cell" data-execution_count="3">
+<div id="5fe66ae5" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df_treatment <span class="op">=</span> data[data[<span class="st">'treatment'</span>] <span class="op">==</span> <span class="dv">1</span>][<span class="st">'gave'</span>].dropna()</span>
@@ -982,7 +978,7 @@ Mean Difference: 0.004
 </section>
 <section id="regression-code-1" class="level3 code-fold">
 <h3 class="code-fold anchored" data-anchor-id="regression-code-1">Regression Code</h3>
-<div id="bf958a40" class="cell" data-execution_count="4">
+<div id="b3a1d5e9" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df_clean <span class="op">=</span> data[[<span class="st">'gave'</span>, <span class="st">'treatment'</span>]].dropna()</span>
@@ -998,8 +994,8 @@ Mean Difference: 0.004
 Dep. Variable:                   gave   R-squared:                       0.000
 Model:                            OLS   Adj. R-squared:                  0.000
 Method:                 Least Squares   F-statistic:                     9.618
-Date:                Wed, 23 Apr 2025   Prob (F-statistic):            0.00193
-Time:                        02:05:00   Log-Likelihood:                 26630.
+Date:                Fri, 25 Apr 2025   Prob (F-statistic):            0.00193
+Time:                        13:41:14   Log-Likelihood:                 26630.
 No. Observations:               50083   AIC:                        -5.326e+04
 Df Residuals:                   50081   BIC:                        -5.324e+04
 Df Model:                           1                                         
@@ -1030,7 +1026,7 @@ Notes:
 </section>
 <section id="code" class="level3 code-fold">
 <h3 class="code-fold anchored" data-anchor-id="code">Code</h3>
-<div id="723b4ec8" class="cell" data-execution_count="5">
+<div id="69f3f2ee" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>df_clean <span class="op">=</span> data[[<span class="st">'gave'</span>, <span class="st">'treatment'</span>]].dropna()</span>
@@ -1050,8 +1046,8 @@ Notes:
 Dep. Variable:                   gave   No. Observations:                50083
 Model:                         Probit   Df Residuals:                    50081
 Method:                           MLE   Df Model:                            1
-Date:                Wed, 23 Apr 2025   Pseudo R-squ.:               0.0009783
-Time:                        02:05:01   Log-Likelihood:                -5030.5
+Date:                Fri, 25 Apr 2025   Pseudo R-squ.:               0.0009783
+Time:                        13:41:15   Log-Likelihood:                -5030.5
 converged:                       True   LL-Null:                       -5035.4
 Covariance Type:            nonrobust   LLR p-value:                  0.001696
 ==============================================================================
@@ -1075,7 +1071,7 @@ treatment      0.0868      0.028      3.113      0.002       0.032       0.141
 </section>
 <section id="t-test-code-2" class="level3 code-fold">
 <h3 class="code-fold anchored" data-anchor-id="t-test-code-2">T-test Code</h3>
-<div id="5e1fcee2" class="cell" data-execution_count="6">
+<div id="7613f803" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter for treatment group with valid ratio and donation outcome</span></span>
@@ -1131,7 +1127,7 @@ T-test Results:
 </section>
 <section id="regression-code-2" class="level3 code-fold">
 <h3 class="code-fold anchored" data-anchor-id="regression-code-2">Regression Code</h3>
-<div id="a24a3df2" class="cell" data-execution_count="7">
+<div id="58a043f3" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter treatment group and prepare ratio dummies</span></span>
@@ -1151,8 +1147,8 @@ T-test Results:
 Dep. Variable:                   gave   R-squared:                       0.000
 Model:                            OLS   Adj. R-squared:                 -0.000
 Method:                 Least Squares   F-statistic:                    0.6454
-Date:                Wed, 23 Apr 2025   Prob (F-statistic):              0.524
-Time:                        02:05:01   Log-Likelihood:                 16688.
+Date:                Fri, 25 Apr 2025   Prob (F-statistic):              0.524
+Time:                        13:41:15   Log-Likelihood:                 16688.
 No. Observations:               33396   AIC:                        -3.337e+04
 Df Residuals:                   33393   BIC:                        -3.334e+04
 Df Model:                           2                                         
@@ -1174,7 +1170,7 @@ Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/var/folders/4_/b_ln9nlx3j19x_2nmv9t3rd40000gn/T/ipykernel_21489/4272491186.py:3: SettingWithCopyWarning:
+<pre><code>/var/folders/4_/b_ln9nlx3j19x_2nmv9t3rd40000gn/T/ipykernel_51210/4272491186.py:3: SettingWithCopyWarning:
 
 
 A value is trying to be set on a copy of a slice from a DataFrame.
@@ -1182,7 +1178,7 @@ Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
 
-/var/folders/4_/b_ln9nlx3j19x_2nmv9t3rd40000gn/T/ipykernel_21489/4272491186.py:4: SettingWithCopyWarning:
+/var/folders/4_/b_ln9nlx3j19x_2nmv9t3rd40000gn/T/ipykernel_51210/4272491186.py:4: SettingWithCopyWarning:
 
 
 A value is trying to be set on a copy of a slice from a DataFrame.
@@ -1212,7 +1208,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </section>
 <section id="code-1" class="level3 code-fold">
 <h3 class="code-fold anchored" data-anchor-id="code-1">Code</h3>
-<div id="d43e7e6c" class="cell" data-execution_count="8">
+<div id="5a035386" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Directly from data</span></span>
@@ -1265,7 +1261,7 @@ From regression coefficients:
 </section>
 <section id="t-test-code-3" class="level3 code-fold">
 <h3 class="code-fold anchored" data-anchor-id="t-test-code-3">T-test Code</h3>
-<div id="af818cb1" class="cell" data-execution_count="9">
+<div id="5215f569" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># T-test comparing donation amounts</span></span>
@@ -1300,7 +1296,7 @@ Mean difference: 0.154</code></pre>
 </section>
 <section id="regression-code-3" class="level3 code-fold">
 <h3 class="code-fold anchored" data-anchor-id="regression-code-3">Regression Code</h3>
-<div id="ceef42eb" class="cell" data-execution_count="10">
+<div id="0e1e1e66" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter: only donors</span></span>
@@ -1319,8 +1315,8 @@ Mean difference: 0.154</code></pre>
 Dep. Variable:                 amount   R-squared:                       0.000
 Model:                            OLS   Adj. R-squared:                 -0.001
 Method:                 Least Squares   F-statistic:                    0.3374
-Date:                Wed, 23 Apr 2025   Prob (F-statistic):              0.561
-Time:                        02:05:01   Log-Likelihood:                -5326.8
+Date:                Fri, 25 Apr 2025   Prob (F-statistic):              0.561
+Time:                        13:41:15   Log-Likelihood:                -5326.8
 No. Observations:                1034   AIC:                         1.066e+04
 Df Residuals:                    1032   BIC:                         1.067e+04
 Df Model:                           1                                         
@@ -1386,7 +1382,7 @@ Notes:
 </section>
 <section id="simulation-code" class="level3 code-fold">
 <h3 class="code-fold anchored" data-anchor-id="simulation-code">Simulation Code</h3>
-<div id="144ba68b" class="cell" data-execution_count="11">
+<div id="e4be4616" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -1450,7 +1446,7 @@ Notes:
 </section>
 <section id="simulation-code-1" class="level3 code-fold">
 <h3 class="code-fold anchored" data-anchor-id="simulation-code-1">Simulation Code</h3>
-<div id="6cfe2db5" class="cell" data-execution_count="12">
+<div id="46d90118" class="cell" data-execution_count="12">
 <details class="code-fold">
 <summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter: only positive donation amounts</span></span>

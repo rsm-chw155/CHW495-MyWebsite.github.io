@@ -1,0 +1,12 @@
+---
+title: "Untitled"
+format: html
+---
+<button id="activate-thebe">▶ Click here to activate code</button>
+```{python thebe}
+print("👋 Hello! This will run only after you click 'Run'!")
+```
+
+::: {.callout-note title="Click to show analysis" collapse=true}
+:::
+

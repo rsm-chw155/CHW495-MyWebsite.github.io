@@ -25,5 +25,14 @@
   },
   "blog/A Replication of Karlan and List (2007)/A Replication of Karlan and List (2007).qmd": {
     "A Replication of Karlan and List (2007).html": "c4b2fd63"
+  },
+  "test-1.qmd": {
+    "test-1.html": "1c657489"
+  },
+  "blog/project1/hw2_questions.qmd": {
+    "hw2_questions.html": "aa4602c0"
+  },
+  "blog/project1/homework2.ipynb": {
+    "homework2.html": "8af9af0b"
   }
 }

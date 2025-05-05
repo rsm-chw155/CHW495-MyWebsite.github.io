@@ -1,7 +1,0 @@
----
-title: "Project1"
-format: html
----
-### Section 1: Data
-
-I clean some data

@@ -14,7 +14,6 @@ The study found that announcing a matching grant significantly increased both th
 
 This project aims to replicate their findings.
 
-
 ## Data
 
 ### Data Description
