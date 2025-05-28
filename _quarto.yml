@@ -24,8 +24,8 @@ format:
     code-summary: "Show Code"
     thebe: true
 
-# execute:
-#   echo: true
+execute:
+  echo: true
 #   eval: true
 #   output: true
 
